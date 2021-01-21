@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ScanBarcodeSample.MainPage"
+             xmlns:zxing="clr-namespace:ZXing.Net.Mobile.Forms;assembly=ZXing.Net.Mobile.Forms">
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Barcode Tester" HorizontalTextAlignment="Center" TextColor="White" FontSize="36" />
+        </Frame>
+        <Label x:Name="scanResultText" />
+      <!--//  <zxing:ZXingScannerView IsScanning="True" OnScanResult="ZXingScannerView_OnScanResult" />-->
+        <Button x:Name="btnStart" Text="Start" Clicked="btnStart_Clicked"/>
+        <Grid
+            RowSpacing="5"
+            Padding="5" RowDefinitions="40,40,40,40,40" ColumnDefinitions="*,70">
+
+            <!--ROW 0-->
+
+
+            <Label
+                Text="Try harder"
+                FontSize="Small"
+                VerticalOptions="Center"
+                HorizontalOptions="StartAndExpand"
+                Grid.Row="0"
+                Grid.Column="0">
+            </Label>
+            <Switch  
+                x:Name="swTryHarder"               
+                Toggled="swTryHarder_Toggled"               
+                VerticalOptions="Center"
+                Grid.Row="0"
+                Grid.Column="1">
+            </Switch>
+            <Label
+                Text="Flash"
+                FontSize="Small"
+                VerticalOptions="Center"
+                HorizontalOptions="StartAndExpand"
+                Grid.Row="1"
+                Grid.Column="0">
+            </Label>
+            <Switch
+                x:Name="swFlashButton"
+                Toggled="swFlashButton_Toggled"
+                VerticalOptions="Center"
+                Grid.Row="1"
+                Grid.Column="1">
+            </Switch>
+            <Label
+                Text="Try Inverted"
+                FontSize="Small"
+                VerticalOptions="Center"
+                HorizontalOptions="StartAndExpand"
+                Grid.Row="2"
+                Grid.Column="0">
+            </Label>
+                <Switch
+                x:Name="swTryInverted"
+                Toggled="swTryInverted_Toggled"
+                VerticalOptions="Center"
+                Grid.Row="2"
+                Grid.Column="1">
+                </Switch>
+            <Label
+                Text="Native Scanning"
+                FontSize="Small"
+                VerticalOptions="Center"
+                HorizontalOptions="StartAndExpand"
+                Grid.Row="3"
+                Grid.Column="0">
+            </Label>
+            <Switch
+                x:Name="swNativeScanning"
+                Toggled="swNativeScanning_Toggled"
+                VerticalOptions="Center"
+                Grid.Row="3"
+                Grid.Column="1">
+            </Switch>
+            <Label
+                Text="AutoRotate"
+                FontSize="Small"
+                VerticalOptions="Center"
+                HorizontalOptions="StartAndExpand"
+                Grid.Row="4"
+                Grid.Column="0">
+            </Label>
+            <Switch
+                x:Name="swAutoRotate"
+                Toggled="swAutoRotate_Toggled"
+                VerticalOptions="Center"
+                Grid.Row="4"
+                Grid.Column="1">
+            </Switch>
+
+
+        </Grid>
+
+    </StackLayout>
+</ContentPage>
