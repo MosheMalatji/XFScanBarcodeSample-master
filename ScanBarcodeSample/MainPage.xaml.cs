@@ -31,9 +31,6 @@ namespace ScanBarcodeSample
 
         private async void ShowScanner()
         {
-
-            //Grid0.IsVisible = false;
-            // ScannerLayout.IsVisible = true;
             var scanner = new ZXing.Mobile.MobileBarcodeScanner
             {
                 FlashButtonText = "Flash",
@@ -88,7 +85,6 @@ namespace ScanBarcodeSample
             try
             {
 
-
                 ScannerPage.AutoFocus();
                 ScannerPage.OnScanResult += (result) =>
                 {
@@ -122,8 +118,6 @@ namespace ScanBarcodeSample
                 navPage.ToolbarItems.Add(toolbarItem);
 
                 await Navigation.PushModalAsync(navPage);
-
-                //    await Navigation.PushModalAsync(ScannerPage);
 
             }
             catch (Exception ex)
